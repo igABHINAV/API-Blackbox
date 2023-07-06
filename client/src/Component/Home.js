@@ -18,7 +18,8 @@ const Home = () => {
             "headers": {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${Bearertoken}`
-            }
+            },
+            "data":`${data}`
         }
 
         let response = await fetch('http://127.0.0.1:8000/', {
