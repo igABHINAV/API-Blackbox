@@ -18,7 +18,8 @@ const Home = () => {
             "headers": {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${Bearertoken}`
-            }
+            },
+            "data":`${data}`
         }
 
         let response = await fetch('http://127.0.0.1:8000/', {
@@ -112,12 +113,12 @@ const Home = () => {
 
                 
 
-                <div className="container my-5">
-                    <div className="p-5 text-center bg-body-tertiary rounded-3">
-                        <h1 className="text-body-emphasis">status code : {cache['status_code']}</h1>
-                        <p className="lead">
+                <div className="container  my-5" >
+                    <div className="p-5 text-center bg-body-tertiary  rounded-3" >
+                        <h1 className="text-body-emphasis ">status code : {cache['status_code']}</h1>
+                        <p className="lead bg-dark">
                             
-                            <code>{cache['content']}</code>
+                            <code >{cache['content']}</code>
                         </p>
                     </div>
                 </div>
