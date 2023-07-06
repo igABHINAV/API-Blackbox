@@ -2,6 +2,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 import requests
 import websocket
+from django.shortcuts import render
 # Create your views here.
 
 
@@ -35,3 +36,6 @@ def send_request(request):
         }, status=400)
     
 
+    
+def index(req) :
+    return render(req , 'index.html')
